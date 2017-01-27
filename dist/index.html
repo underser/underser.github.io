@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <div class="contact-form">
+      <p class="contact-form__title">Напишите нам</p>
+      <p class="contact-form__sub-title">если у вас есть вопросы, замечания и предложения</p>
+      <form action="/contactSubmit" method="POST" class="form">
+        <textarea rows="4" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, praesentium velit ratione provident, dolor consequatur eveniet facilis quos cumque modi." class="form__input form__input--big"></textarea>
+        <div class="form__body">
+          <div class="form__row">
+            <div class="col-2 col-xs-3 col-xxs-12">
+              <label for="contactFormName" class="form__label">Имя</label>
+            </div>
+            <div class="col-10 col-xs-9 col-xxs-12">
+              <input type="text" placeholder="Сергей Фролов" id="contactFormName" class="form__input">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="col-2 col-xs-3 col-xxs-12">
+              <label for="contactFormEmail" class="form__label">Почта</label>
+            </div>
+            <div class="col-10 col-xs-9 col-xxs-12">
+              <input type="email" placeholder="sergey.frolov@mail.com" id="contactFormEmail" class="form__input">
+            </div>
+          </div>
+        </div>
+        <div class="form__body">
+          <button type="submit" class="btn btn--red">Отправить</button>
+        </div>
+      </form>
+    </div>
+    <!-- Header-->
+    <!-- Header End-->
+    <!-- Content-->
+    <!-- Content End-->
+    <!-- Footer-->
+    <!-- Footer End-->
+    <script src="js/common.js"></script>
+  </body>
+</html>
