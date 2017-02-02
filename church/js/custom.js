@@ -1,0 +1,9 @@
+jQuery(document).ready(function($){"use strict";if($('#header').length){var stickyNavTop=$('.main').offset().top;var stickyNav=function(){var scrollTop=$(window).scrollTop();if(scrollTop>stickyNavTop){$('#header').addClass('cp_sticky');}else{$('#header').removeClass('cp_sticky');}};stickyNav();$(window).scroll(function(){stickyNav();});}
+if($('#banner-slider').length){$('#banner-slider').bxSlider({auto:true,navigation:true,pager:true,nextText:'',prevText:' ',});}
+if($('#s1').length){$('#s1').bxSlider({auto:true,pagerCustom:'#bx-pager',navigation:false,pager:true,pause:5000,mode:'fade',});}
+if($('#s2').length){$('#s2').bxSlider({auto:true,pagerCustom:'#bx-pager',navigation:false,pager:true,pause:5000,mode:'fade',});}
+if($('#s3').length){$('#s3').bxSlider({auto:true,pagerCustom:'#bx-pager',navigation:false,pager:true,pause:5000,mode:'fade',});}
+if($('#map_contact').length){var map;var myLatLng=new google.maps.LatLng(48.85661,2.35222);var myOptions={zoom:12,center:myLatLng,zoomControl:true,mapTypeId:google.maps.MapTypeId.ROADMAP,mapTypeControl:false,styles:[{saturation:-100,lightness:10}],}
+map=new google.maps.Map(document.getElementById('map_contact'),myOptions);var marker=new google.maps.Marker({position:map.getCenter(),map:map,});marker.getPosition();}
+if($('#map_contact2').length){var map;var myLatLng=new google.maps.LatLng(48.85661,2.35222);var myOptions={zoom:12,center:myLatLng,zoomControl:true,mapTypeId:google.maps.MapTypeId.ROADMAP,mapTypeControl:false,styles:[{saturation:-100,lightness:10}],}
+map=new google.maps.Map(document.getElementById('map_contact2'),myOptions);var marker=new google.maps.Marker({position:map.getCenter(),map:map,});marker.getPosition();}});
