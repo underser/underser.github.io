@@ -1,0 +1,179 @@
+extends jade-includes/_header.jade
+block content
+	body
+		include jade-includes/_tmp-nav.jade
+		.wrapper
+			.main
+				// top line
+				.head-banner
+					header#header
+						.header-wrapper
+							.header-holder
+								style.
+									#logo {
+									width: 80%;
+									background-image: url('images/mainLogo.jpg');
+									background-size: 50px 50px;
+									padding-left: 60px;
+									}
+									#logo a {
+									color: #fff;
+									font-size: 25px;
+									line-height: 23px;
+									display: inline-block;
+									height: auto;
+									}
+									#logo a:hover {
+									text-decoration: none;
+									}
+								h1#logo
+									a(href='../index.html')
+										| СВЯТО-НИКОЛЬСКАЯ ЖЕНСКАЯ ОБИТЕЛЬ 
+										br
+										|  в селе Санино
+				// top line end
+				// slider
+				.banner
+					#banner-slider.bxslider
+						.item
+							img(src='images/img-1.jpg', alt='image')
+							.banner-caption
+								ul
+									li
+										a.inner-text(href='#') 1 Sed ut peris unde omni
+										span
+									li
+										a.inner-text.inner-text2(href='#') Invore veritatis et quasi itecto
+										span
+						.item
+							img(src='images/banner-img-2.jpg', alt='image')
+							.banner-caption
+								ul
+									li
+										a.inner-text(href='#') 1 Sed ut peris unde omni
+										span
+									li
+										a.inner-text.inner-text2(href='#') Invore veritatis et quasi itecto
+										span
+						.item
+							img(src='images/banner-img-3.jpg', alt='image')
+							.banner-caption
+								ul
+									li
+										a.inner-text(href='#') 1 Sed ut peris unde omni
+										span
+									li
+										a.inner-text.inner-text2(href='#') Invore veritatis et quasi itecto
+										span
+				// slider end
+				.content
+					section.grid-holder
+						section.grid
+							.heading-holder
+								h3.content-heading
+									span
+										em.h-left
+										span.inner-heading Название страницы
+										em.h-right
+							article.column.c-one-third
+								// nav
+								style.
+									.num-post {
+									font-size: 18px;
+									cursor: pointer;
+									width: 20px;
+									height: 20px;
+									border: 1px solid #b2b2b2;
+									text-align: center;
+									border-radius: 50%;
+									line-height: 20px;
+									}
+									.num-post.active {
+									transform: rotate(90deg);
+									border-color: #000;
+									}
+									.sub-menu {
+									visibility: hidden;
+									height: 0;
+									overflow: hidden;
+									transition: all 0.5s;
+									}
+									.sub-menu.active {
+									visibility: visible;
+									height: auto;
+									overflow: auto;
+									transition: all 0.5s;
+									}
+								script.
+									document.addEventListener("DOMContentLoaded", function() {
+									var items = document.body.querySelectorAll(".num-post");
+									[].forEach.call(items, function(item) {
+									item.addEventListener("click", function() {
+									this.classList.toggle("active");
+									this.closest("li").querySelector(".sub-menu").classList.toggle("active");
+									})
+									})
+									}, false)
+								.right-sidebar
+									.sidebar-h
+										strong.right-heading
+											span Меню
+									ul.archives
+										li
+											span
+												a(href='#') Пункт 1
+												span.num-post >
+											ul.sub-menu
+												li
+													a(href='#') Подпункт
+												li
+													a(href='#') Подпункт
+												li
+													a(href='#') Подпункт
+										li
+											a(href='#') Пункт 2
+											span.num-post >
+										li
+											a(href='#') Пункт 3
+											span.num-post >
+										li
+											a(href='#') Пункт 4
+											span.num-post >
+										li
+											a(href='#') Пункт 5
+											span.num-post >
+								.calender
+									#calendar.calender-box
+								// nav end
+							article.column.c-three-fourth
+								p Тут контент
+			footer.footer
+				.footer-holder
+					.footer-frame
+						.bottom
+							.holder
+								section.grid-holder
+									section.grid
+										article.column.c-three-fourth
+											.box
+												p 601293, Владимирская обл., Суздальский р-н, с. Санино
+												p
+												p e-mail: info@ДОМЕН
+												p СВЯТО-НИКОЛЬСКАЯ ЖЕНСКАЯ ОБИТЕЛЬ в с. Санино – Копирайт ВСЕ ПРАВА ЗАЩИЩЕНЫ
+										article.column.c-one-third
+											.box
+												p
+													| Все права и материалы, опубликованные на этом сайте, принадлежат СВЯТО-НИКОЛЬСКОЙ ЖЕНСКОЙ ОБИТЕЛИ в с. Санино. Копирайт 2016
+		script(src='js/jquery-1.11.3.min.js')
+		script(src='js/jquery-1.js')
+		script(src='js/jquery-u.js')
+		script(src='js/jquery.bxslider.min.js')
+		script(src='../../maps.google.com/maps/api/js@sensor=false')
+		script(src='js/sourtin-jquery.js')
+		script(src='js/jqueryi-icon-menu.js')
+		script(src='js/tytabs.js')
+		script(src='js/browser-detect.js')
+		script(type='text/javascript', src='js/speakker-big-1.2.02r134.min.js')
+		script(src='js/jquery.timelinr-0.9.52.js')
+		script(src='js/custom.js')
+		script(src='js/jquery.countdown.js')

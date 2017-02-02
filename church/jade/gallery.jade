@@ -1,0 +1,279 @@
+doctype html
+//if IE 7 
+	html.ie.ie7(lang='en')  
+//if IE 8 
+	html.ie.ie8(lang='en')  
+// [if (gte IE 9)|!(IE)] <!
+html(lang='en')
+	// <![endif]
+	head
+		meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+		link(rel='stylesheet', href='../css/calendar.css', media='screen')
+		meta(charset='utf-8')
+		title The Church
+		meta(name='description', content='')
+		meta(name='author', content='')
+		link(rel='icon', type='image/png', href='../images/favicon.png')
+		meta(name='description', content='')
+		meta(name='author', content='')
+		link(rel='icon', type='image/png', href='../images/favicon.png')
+		meta(name='description', content='')
+		meta(name='author', content='')
+		link(rel='icon', type='image/png', href='../images/favicon.png')
+		link(rel='stylesheet', href='../css/all.css', type='text/css', media='all')
+		link(rel='stylesheet', href='../css/responsive.css', type='text/css', media='all')
+		link(rel='stylesheet', href='../css/jquery.bxslider.css', type='text/css', media='all')
+		link(rel='stylesheet', href='../css/shortcode.css', type='text/css', media='all')
+		link(rel='stylesheet', href='../css/javascri.css', type='text/css', media='all')
+		link(rel='stylesheet', href='../css/prettyPhoto.css', type='text/css', media='all')
+		link#stylesheet(rel='stylesheet', href='../css/default.css')
+		link(rel='stylesheet', href='../css/megamenu.css', type='text/css', media='screen')
+		//if lt IE 9
+			script(src='../js/html5.js')
+	body
+		style.
+			.tmp-nav {
+			position: fixed;
+			top: 200px;
+			left: 0;
+			padding: 5px 10px;
+			background: #b2b2b2;
+			z-index: 9999;
+			}
+		ul.tmp-nav
+			li
+				a(href='index.html') Главная
+			li
+				a(href='default.html') Стандартный шаблон
+			li
+				a(href='gallery.html') Шаблон галереи
+			li
+				a(href='reviews.html') Шаблон отзывов
+			li
+				a(href='contacts.html') Шаблон контакты
+		.wrapper
+			.main
+				// top line
+				.head-banner
+					header#header
+						.header-wrapper
+							.header-holder
+								style.
+									#logo {
+									width: 80%;
+									background-image: url('../images/mainLogo.jpg');
+									background-size: 50px 50px;
+									padding-left: 60px;
+									}
+									#logo a {
+									color: #fff;
+									font-size: 25px;
+									line-height: 23px;
+									display: inline-block;
+									height: auto;
+									}
+									#logo a:hover {
+									text-decoration: none;
+									}
+								h1#logo
+									a(href='../index.html')
+										| СВЯТО-НИКОЛЬСКАЯ ЖЕНСКАЯ ОБИТЕЛЬ 
+										br
+										|  в селе Санино
+				// top line end
+				.content
+					section.grid-holder
+						section.grid
+							.heading-holder
+								h3.content-heading
+									span
+										em.h-left
+										span.inner-heading Название страницы
+										em.h-right
+							article.column.c-one-third
+								// nav
+								style.
+									.num-post {
+									font-size: 18px;
+									cursor: pointer;
+									width: 20px;
+									height: 20px;
+									border: 1px solid #b2b2b2;
+									text-align: center;
+									border-radius: 50%;
+									line-height: 20px;
+									}
+									.num-post.active {
+									transform: rotate(90deg);
+									border-color: #000;
+									}
+									.sub-menu {
+									visibility: hidden;
+									height: 0;
+									overflow: hidden;
+									transition: all 0.5s;
+									}
+									.sub-menu.active {
+									visibility: visible;
+									height: auto;
+									overflow: auto;
+									transition: all 0.5s;
+									}
+								script.
+									document.addEventListener("DOMContentLoaded", function() {
+									var items = document.body.querySelectorAll(".num-post");
+									[].forEach.call(items, function(item) {
+									item.addEventListener("click", function() {
+									this.classList.toggle("active");
+									this.closest("li").querySelector(".sub-menu").classList.toggle("active");
+									})
+									})
+									}, false)
+								.right-sidebar
+									.sidebar-h
+										strong.right-heading
+											span Меню
+									ul.archives
+										li
+											span
+												a(href='#') Пункт 1
+												span.num-post >
+											ul.sub-menu
+												li
+													a(href='#') Подпункт
+												li
+													a(href='#') Подпункт
+												li
+													a(href='#') Подпункт
+										li
+											a(href='#') Пункт 2
+											span.num-post >
+										li
+											a(href='#') Пункт 3
+											span.num-post >
+										li
+											a(href='#') Пункт 4
+											span.num-post >
+										li
+											a(href='#') Пункт 5
+											span.num-post >
+								.calender
+									#calendar.calender-box
+								// nav end
+							article.column.c-three-fourth
+								section.grid-holder
+									section#catagory-item-holder.grid.lightbox.gallery.masonry(style='position: relative; height: 852px;')
+										figure.column.c-one-fourth.gallery-col.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 0px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-1.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-1.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Our Churches
+												p Sit amet, consectetur adipiscing 
+										figure.column.c-one-fourth.gallery-col.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 220px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-2.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-2.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Faith
+												p Sit amet, consectetur adipiscing 
+												strong
+										figure.column.c-one-fourth.gallery-col.Black.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 440px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-3.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-3.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Priests
+												p Sit amet, consectetur adipiscing 
+										figure.column.c-one-fourth.gallery-col.Portrait.catagory-item.masonry-brick(style='position: absolute; top: 284px; left: 0px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-4.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-4.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Prayers
+												p Sit amet, consectetur adipiscing 
+										figure.column.c-one-fourth.gallery-col.Portrait.catagory-item.masonry-brick(style='position: absolute; top: 284px; left: 220px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-5.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-5.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') True Words
+												p Sit amet, consectetur adipiscing 
+												strong
+										figure.column.c-one-fourth.gallery-col.catagory-item.masonry-brick(style='position: absolute; top: 284px; left: 440px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-6.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-6.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Hope
+												p Sit amet, consectetur adipiscing 
+										figure.column.c-one-fourth.gallery-col.catagory-item.masonry-brick(style='position: absolute; top: 568px; left: 0px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-7.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-7.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Joy
+												p Sit amet, consectetur adipiscing 
+										figure.column.c-one-fourth.gallery-col.catagory-item.masonry-brick(style='position: absolute; top: 568px; left: 220px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-8.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-8.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Trust
+												p Sit amet, consectetur adipiscing 
+												strong
+										figure.column.c-one-fourth.gallery-col.catagory-item.masonry-brick(style='position: absolute; top: 568px; left: 440px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='../images/gallery-img-9.jpg', rel='prettyPhoto[gallery1]')
+														img.pic(src='../images/gallery-img-9.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='gallery-singlepost.html') Love
+												p Sit amet, consectetur adipiscing 
+			footer.footer
+				.footer-holder
+					.footer-frame
+						.bottom
+							.holder
+								section.grid-holder
+									section.grid
+										article.column.c-three-fourth
+											.box
+												p 601293, Владимирская обл., Суздальский р-н, с. Санино
+												p
+												p e-mail: info@ДОМЕН
+												p СВЯТО-НИКОЛЬСКАЯ ЖЕНСКАЯ ОБИТЕЛЬ в с. Санино – Копирайт ВСЕ ПРАВА ЗАЩИЩЕНЫ
+										article.column.c-one-third
+											.box
+												p
+													| Все права и материалы, опубликованные на этом сайте, принадлежат СВЯТО-НИКОЛЬСКОЙ ЖЕНСКОЙ ОБИТЕЛИ в с. Санино. Копирайт 2016
+		script(src='../js/jquery-1.11.3.min.js')
+		script(src='../js/jquery-1.js')
+		script(src='../js/jquery-u.js')
+		script(src='../js/jquery.bxslider.min.js')
+		script(src='../../../maps.google.com/maps/api/js@sensor=false')
+		script(src='../js/sourtin-jquery.js')
+		script(src='../js/jqueryi-icon-menu.js')
+		script(src='../js/tytabs.js')
+		script(src='../js/browser-detect.js')
+		script(type='text/javascript', src='../js/speakker-big-1.2.02r134.min.js')
+		script(src='../js/jquery.timelinr-0.9.52.js')
+		script(src='../js/custom.js')
+		script(src='../js/jquery.countdown.js')
