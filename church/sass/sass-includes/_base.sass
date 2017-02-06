@@ -1,17 +1,11 @@
-@include border-box-sizing
-
-body, html
-	min-width: $container-min-width
-	font: 300 $base-font-size $base-font
-	@include breakpoint($md)
-		font-size: $base-font-size - 1px !important
-	@include breakpoint($sm)
-		font-size: $base-font-size - 2px !important
-
 body
-	overflow-x: hidden
-	&.over-hide
-		overflow: hidden !important
+	font-family: Verdana, sans-serif
+	p
+		font-family: Verdana, sans-serif
+
+@font-face
+	font-family: "RusDecor"
+	src: url(../vendor/fonts/RussDecor.ttf)
 
 //*-----
 	If you need grid classes
@@ -25,8 +19,6 @@ body
 //----*/
 //@include modal
 
-img
-	max-width: 100%
 
 .hide
 	display: none
