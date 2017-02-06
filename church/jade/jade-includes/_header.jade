@@ -9,7 +9,10 @@ html(lang='en')
 	// <![endif]
 	head
 		meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
-		base(href="../vendor/")
+		script.
+			var url = document.URL;
+			var base = "base(href='" + url + "')";
+			document.write(base);
 		link(rel='stylesheet', href='css/calendar.css', media='screen')
 		meta(charset='utf-8')
 		title The Church
