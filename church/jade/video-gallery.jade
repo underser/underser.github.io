@@ -1,0 +1,30 @@
+extends jade-includes/_header.jade
+block content
+	body
+		include jade-includes/_tmp-nav.jade
+		.wrapper
+			.main
+				include jade-includes/_body-header.jade
+				.content
+					section.grid-holder
+						section.grid
+							.heading-holder
+								h3.content-heading
+									span
+										em.h-left
+										span.inner-heading Название страницы
+										em.h-right
+							include jade-includes/_aside.jade
+							article.column.c-three-fourth
+								section.grid-holder
+									section#catagory-item-holder.grid.lightbox.gallery.masonry(style='position: relative; height: 852px;')
+										figure.column.c-one-fourth.gallery-col.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 0px;')
+											.item.alpha.gallery-item
+												.caption.gallery-box
+													a(href='https://www.youtube.com/watch?v=dszqObMPwmo', rel='prettyPhoto[gallery1]')
+														img.pic(src='vendor/images/gallery-img-1.jpg', alt='')
+														span.hover-effect.big.zoom
+												strong.gallery-titel
+													a(href='vendor/gallery-singlepost.html') Видео
+												p При нажатии на изображение откроется видео
+			include jade-includes/_footer.jade

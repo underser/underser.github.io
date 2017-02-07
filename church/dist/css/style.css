@@ -81,3 +81,32 @@ body p {
 .footer p {
   font-family: "RusDecor";
 }
+
+.content {
+  margin-top: 130px;
+}
+
+.social {
+  padding: 10px 0;
+}
+
+.social-item {
+  display: inline-block;
+  margin: 1px;
+  padding: 8px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #000;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.social-item:hover {
+  border: 2px solid #fff;
+}
+
+.social-item img {
+  width: 20px;
+  height: 20px;
+}

@@ -2,14 +2,12 @@ article.column.c-one-third
 	// nav
 	style.
 		.num-post {
-		font-size: 18px;
-		cursor: pointer;
-		width: 20px;
-		height: 20px;
-		border: 1px solid #b2b2b2;
-		text-align: center;
-		border-radius: 50%;
-		line-height: 20px;
+			background: url(vendor/images/faqclose.png) no-repeat 0 0;
+			width: 29px;
+			height: 29px;
+			float: right;
+			margin-top: -3px;
+			cursor: pointer;
 		}
 		.num-post.active {
 		transform: rotate(90deg);
@@ -45,7 +43,7 @@ article.column.c-one-third
 			li
 				span
 					a(href='#') Пункт 1
-					span.num-post >
+					span.num-post
 				ul.sub-menu
 					li
 						a(href='#') Подпункт
@@ -62,5 +60,5 @@ article.column.c-one-third
 			li
 				a(href='#') Пункт 5
 	.calender
-		#calendar.calender-box
+		a(href="calendar.html").readmorebtn.large Православный календарь
 	// nav end

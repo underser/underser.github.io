@@ -5,7 +5,6 @@ block content
 		.wrapper
 			.main
 				include jade-includes/_body-header.jade
-				include jade-includes/_slider.jade
 				.content
 					section.grid-holder
 						section.grid
@@ -18,24 +17,18 @@ block content
 							include jade-includes/_aside.jade
 							article.column.c-three-fourth
 								// comments from book
-								section#catagory-item-holder.grid.lightbox.gallery.masonry(style='position: relative; height: 1674px;')
-									figure.column.c-one-half.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 0px;')
-										.item.alpha.gallery-item
-											.caption.gallery-box
-												a(href='images/gallery-img-1.jpg', rel='prettyPhoto[gallery1]')
-													img.pic(src='vendor/images/gallery-img-1.jpg', alt='')
-											strong.gallery-titel
-												a(href='gallery-singlepost.html') заголовок отзыва
-											p описание отзыва
-									figure.column.c-one-half.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 494px;')
-										.item.alpha.gallery-item
-											.caption.gallery-box
-												a(href='images/gallery-img-2.jpg', rel='prettyPhoto[gallery1]')
-													img.pic(src='vendor/images/gallery-img-2.jpg', alt='')
-											strong.gallery-titel
-												a(href='gallery-singlepost.html') Faith
-											p Sit amet, consectetur adipiscing 
-											strong
+								section.grid-holder
+									section#catagory-item-holder.grid.lightbox.gallery.masonry(style='position: relative; height: 852px;')
+										- for(var i = 0; i < 5; i++)
+												figure.column.c-one-fourth.gallery-col.Landscape.catagory-item.masonry-brick(style='position: absolute; top: 0px; left: 0px;')
+													.item.alpha.gallery-item
+														.caption.gallery-box
+															a(href='vendor/images/gallery-img-1.jpg', rel='prettyPhoto[gallery1]')
+																img.pic(src='vendor/images/gallery-img-1.jpg', alt='')
+																span.hover-effect.big.zoom
+														strong.gallery-titel
+															a(href='vendor/gallery-singlepost.html') Заголовок отзыва
+														p Описание отклика
 								// comments from book end
 								// coments
 								.blog-holder

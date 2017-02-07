@@ -1,0 +1,41 @@
+extends jade-includes/_header.jade
+block content
+	body
+		include jade-includes/_tmp-nav.jade
+		.wrapper
+			.main
+				include jade-includes/_body-header.jade
+				.content
+					section.grid-holder
+						section.grid
+							.heading-holder
+								h3.content-heading
+									span
+										em.h-left
+										span.inner-heading Название страницы
+										em.h-right
+							include jade-includes/_aside.jade
+							article.column.c-three-fourth
+								- for(var i = 0; i < 4; i++)
+									//- blog post
+									.church-event
+										article(style="width: 30%; margin: 0;").column.event-post.blog
+											.about-box
+												.img-holder.slide-1
+													img(src='vendor/images/ch-13.jpg', alt='image')
+										article(style="width: 65%; margin: 0; padding: 0 0 0 30px;").column.event-post.blog
+											.blog-post
+												.blog-holder.event-holder
+													strong.name Lorem ipsum dolor sit amet
+													.event-detail
+														span.church-theme
+															| Posted on :
+															em  17 Oct 2012
+													.left(style="padding-right: 0; margin-right: 0; width: 100%")
+														.contact-box(style="padding-right: 0; border-right: none;")
+															p
+																| Fusce aliquam dignissim accumsan. Mauris at posuere leo. Vestibulum lacus enim, vehicula eu cursus sed, malesuada quis massa.
+														.read-more
+															a(href='#') Read More
+									//- blog post end
+			include jade-includes/_footer.jade
