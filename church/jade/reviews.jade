@@ -17,6 +17,7 @@ block content
 							include jade-includes/_aside.jade
 							article.column.c-three-fourth
 								// comments from book
+								h3 Из нашей книги отзывов
 								section.grid-holder
 									section#catagory-item-holder.grid.lightbox.gallery.masonry(style='position: relative; height: 852px;')
 										- for(var i = 0; i < 5; i++)
@@ -33,38 +34,23 @@ block content
 								// coments
 								.blog-holder
 									h4.post-title
-										a(href='#') 2 отзыва
-										span.add-comment
-											a(href='#') Добавить комментарий
+										a(href='#') Обращения посетителей сайта
 									.tags.none
 										ul.post-comments
-											li
-												.holder-news
-													.comment-box
-														.event-comment.post-box
-															img.team-img(src='vendor/images/ch-26.jpg', alt='image')
-															p
-																| Suspendisse sollicitudin commodo venenatis. Donec faucibus rutrum felis, vel suscipit quam ornare sollicitudin. Duis massa ipsum, tempus a rhoncus sit amet, semper sed tortor. Vivamus mollis, justo eget vehicula fermentum, juequat nulla tellus in elit. Suspendisse sollicitudin
-														span.post-c
-													.written
-														span.post-heading
-															| Written by 
-															em Micheal
-															em.com-date December 6th, 2012 at 7:13 pm
-												ul
-													li
-														.holder-news
-															.comment-box-1
-																.event-comment.post-box
-																	img.team-img(src='vendor/images/ch-25.jpg', alt='image')
-																	p
-																		| Suspendisse sollicitudin commodo venenatis. Donec faucibus rutrum felis, vel suscipit quam ornare sollicitudin. Duis massa ipsum, tempus a rhoncus sit amet, semper sed tortor
-																span.post-c
-															.written
-																span.post-heading
-																	| Written by 
-																	em Dominic
-																	em.com-date December 6th, 2012 at 7:13 pm
+											- for(var i = 0; i < 3; i++)
+												li
+													.holder-news
+														.comment-box
+															.event-comment.post-box
+																img.team-img(src='vendor/images/ch-26.jpg', alt='image')
+																p
+																	| Suspendisse sollicitudin commodo venenatis. Donec faucibus rutrum felis, vel suscipit quam ornare sollicitudin. Duis massa ipsum, tempus a rhoncus sit amet, semper sed tortor. Vivamus mollis, justo eget vehicula fermentum, juequat nulla tellus in elit. Suspendisse sollicitudin
+															span.post-c
+														.written
+															span.post-heading
+																| Written by 
+																em Micheal
+																em.com-date December 6th, 2012 at 7:13 pm
 								// comments end
 								// leave comment
 								.blog-holder

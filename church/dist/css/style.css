@@ -49,8 +49,80 @@ body p {
   text-align: center;
 }
 
+.content {
+  max-width: 1280px;
+  margin-top: 185px;
+}
+
+.content .c-three-fourth {
+  width: 850px;
+}
+
 .header-wrapper {
   background-color: #0070c0;
+  opacity: 1;
+}
+
+.header-holder {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  font-family: RusDecor;
+  color: #fff;
+  letter-spacing: 1px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.header-holder-left {
+  width: 40%;
+  padding: 0 20px;
+}
+
+.header-holder-right {
+  width: 80%;
+}
+
+.bx-wrapper .bx-pager {
+  z-index: 9;
+}
+
+.site-name, .location {
+  font-size: 30px;
+  font-family: RusDecor;
+  line-height: 30px;
+  text-align: left;
+}
+
+.site-name {
+  line-height: 35px;
+  color: #ffa15d;
+}
+
+.location {
+  text-align: right;
+  font-size: 20px;
+}
+
+.promo-text {
+  font-size: 15px;
+  font-family: RusDecor;
+  text-align: right;
+  line-height: 21px;
+}
+
+.logo-link {
+  display: block;
+  text-align: center;
+}
+
+.logo-link img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #00528d;
 }
 
 .footer .bottom {
@@ -76,14 +148,31 @@ body p {
 
 .archives li a {
   font-family: "RusDecor";
+  font-weight: bold;
+}
+
+.archives .sub-menu a {
+  font-weight: normal;
 }
 
 .footer p {
   font-family: "RusDecor";
 }
 
-.content {
-  margin-top: 130px;
+.footer-bottom-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-bottom-info .center {
+  margin: auto;
+  text-align: center;
+}
+
+.footer-bottom-info .right {
+  margin-left: auto;
 }
 
 .social {

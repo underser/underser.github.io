@@ -3,26 +3,11 @@
 	header#header
 		.header-wrapper
 			.header-holder
-				style.
-					#logo {
-					text-align: center;
-					width: 100%;
-					background-image: url('vendor/images/mainLogo.jpg');
-					background-size: 80px;
-					}
-					#logo a {
-					color: #fff;
-					font-size: 30px;
-					line-height: 23px;
-					display: inline-block;
-					height: auto;
-					}
-					#logo a:hover {
-					text-decoration: none;
-					}
-				h1#logo
-					a(href='../index.html')
-						| <span style="font-family: RusDecor; display: inline-block; padding-bottom: 8px;">СВЯТО-НИКОЛЬСКАЯ ЖЕНСКАЯ ОБИТЕЛЬ</span>
-						br
-						|  <span style="font-family: RusDecor; display: block; text-align: right;"><span>в селе Санино</span></span><span style="font-size: 15px; font-style: italic;">«Святителю Николае, угодниче Божий, моли Бога о нас!»</span>
+				.header-holder-left
+					a(href="index.html").logo-link
+						img(src="vendor/images/mainLogo.jpg" alt="").logo-img
+					p.promo-text Святителю Николае, угодниче Божий, моли Бога о нас!»
+				.header-holder-right
+					h1.site-name СВЯТО-НИКОЛЬСКИЙ  ЖЕНСКИЙ  МОНАСТЫРЬ
+					p.location в селе Санино <br> Суздальского района Владимирской области
 // top line end
