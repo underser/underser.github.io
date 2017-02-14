@@ -17,6 +17,7 @@
 }
 
 body {
+  min-width: 1280px;
   font-family: Verdana, sans-serif;
 }
 
@@ -66,7 +67,9 @@ body p {
 .header-holder {
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
+  max-width: 1280px;
+  min-width: 1280px;
+  padding: 10px 0;
   font-family: RusDecor;
   color: #fff;
   letter-spacing: 1px;
@@ -87,7 +90,11 @@ body p {
 }
 
 .banner {
-  margin-top: 190px;
+  margin-top: 155px;
+}
+
+.blog-holder .contact-box {
+  width: 100%;
 }
 
 .bx-wrapper .bx-pager {
