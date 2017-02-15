@@ -1,5 +1,5 @@
 .container {
-  max-width: 1280px;
+  max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,8 +17,14 @@
 }
 
 body {
-  min-width: 1280px;
+  min-width: 1260px;
   font-family: Verdana, sans-serif;
+}
+
+@media (min-width: 1260px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 body p {
@@ -51,12 +57,12 @@ body p {
 }
 
 .content {
-  max-width: 1280px;
+  max-width: 1230px;
   margin-top: 185px;
 }
 
 .content .c-three-fourth {
-  width: 850px;
+  width: 900px;
 }
 
 .header-wrapper {
@@ -67,8 +73,8 @@ body p {
 .header-holder {
   display: -ms-flexbox;
   display: flex;
-  max-width: 1280px;
-  min-width: 1280px;
+  max-width: 1230px;
+  min-width: 1230px;
   padding: 10px 0;
   font-family: RusDecor;
   color: #fff;
@@ -134,6 +140,11 @@ body p {
   width: 80px;
   height: 80px;
   border: 1px solid #00528d;
+}
+
+.footer .holder {
+  width: 1230px;
+  max-width: 1230px;
 }
 
 .footer .bottom {

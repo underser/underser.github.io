@@ -9,10 +9,10 @@
 @import "sass-includes/_base.sass"
 
 .content
-	max-width: 1280px
+	max-width: $container-width
 	margin-top: 185px
 	.c-three-fourth
-		width: 850px
+		width: 900px
 
 .header-wrapper
 	background-color: $base
@@ -20,8 +20,8 @@
 
 .header-holder
 	display: flex
-	max-width: 1280px
-	min-width: 1280px
+	max-width: $container-width
+	min-width: $container-width
 	padding: 10px 0
 	font-family: RusDecor
 	color: #fff
@@ -71,6 +71,10 @@
 		width: 80px
 		height: 80px
 		border: 1px solid darken($base, 10%)
+
+.footer .holder
+	width: $container-width
+	max-width: $container-width
 
 .footer .bottom
 	background: $base
