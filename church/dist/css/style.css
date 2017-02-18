@@ -56,13 +56,27 @@ body p {
   text-align: center;
 }
 
+.wrapper {
+  display: table;
+  height: 100%;
+}
+
+.wrapper .main {
+  display: table-row;
+  height: 100%;
+}
+
 .content {
   max-width: 1230px;
-  margin-top: 185px;
+  margin-top: 0;
 }
 
 .content .c-three-fourth {
   width: 900px;
+}
+
+#header {
+  position: relative;
 }
 
 .header-wrapper {
@@ -87,20 +101,26 @@ body p {
 }
 
 .header-holder-left {
-  width: 40%;
-  padding: 0 20px;
+  width: 35%;
+  padding-right: 20px;
 }
 
 .header-holder-right {
-  width: 80%;
-}
-
-.banner {
-  margin-top: 155px;
+  width: 63%;
 }
 
 .blog-holder .contact-box {
   width: 100%;
+}
+
+.blog-holder .left {
+  width: 48%;
+  padding: 0 2% 0 0;
+  margin-right: 2%;
+}
+
+.blog-holder .right {
+  width: 48%;
 }
 
 .bx-wrapper .bx-pager {
@@ -115,20 +135,25 @@ body p {
 }
 
 .site-name {
+  font-size: 35px;
+  text-align: right;
   line-height: 35px;
+  margin-top: 0;
   color: #ffa15d;
 }
 
 .location {
   text-align: right;
   font-size: 20px;
+  margin-top: 47px;
+  margin-bottom: 10px;
 }
 
 .promo-text {
   font-size: 15px;
   font-family: RusDecor;
-  text-align: right;
   line-height: 21px;
+  color: #ffa15d;
 }
 
 .logo-link {
@@ -137,9 +162,9 @@ body p {
 }
 
 .logo-link img {
-  width: 80px;
-  height: 80px;
-  border: 1px solid #00528d;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #b2b2b2;
 }
 
 .footer .holder {
@@ -149,6 +174,7 @@ body p {
 
 .footer .bottom {
   background: #0070c0;
+  padding: 10px 0;
 }
 
 .footer .bottom p {
@@ -168,13 +194,78 @@ body p {
   font-family: "RusDecor";
 }
 
+.right-sidebar {
+  border-color: #795548;
+  background: #FFF59D;
+}
+
+.archives {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.archives li {
+  padding-left: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+
 .archives li a {
+  font-size: 18px;
   font-family: "RusDecor";
   font-weight: bold;
 }
 
 .archives .sub-menu a {
   font-weight: normal;
+}
+
+.archives .right-heading {
+  width: 85%;
+}
+
+.archives .right-heading span {
+  padding: 0 5px 0 10px;
+}
+
+.right-heading {
+  float: none;
+  width: 70%;
+  display: inline-block;
+}
+
+.right-heading span {
+  background: none;
+  padding: 0 50px 3px 45px;
+}
+
+.num-post {
+  background: url(../vendor/images/faqclose.png) no-repeat 0 0;
+  width: 29px;
+  height: 29px;
+  float: right;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.num-post.active {
+  transform: rotate(90deg);
+  border-color: #000;
+}
+
+.sub-menu {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.sub-menu.active {
+  padding-top: 10px;
+  visibility: visible;
+  height: auto;
+  overflow: auto;
+  transition: all 0.5s;
 }
 
 .footer p {
@@ -188,12 +279,18 @@ body p {
   align-items: center;
 }
 
+.footer-bottom-info .left {
+  width: 30%;
+}
+
 .footer-bottom-info .center {
+  width: 60%;
   margin: auto;
   text-align: center;
 }
 
 .footer-bottom-info .right {
+  width: 30%;
   margin-left: auto;
 }
 
@@ -220,4 +317,21 @@ body p {
 .social-item img {
   width: 20px;
   height: 20px;
+}
+
+.bl-read {
+  display: inline-block;
+  width: 35%;
+  padding: 10px 0 8px 0;
+}
+
+.bl-read span {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bl-read a {
+  color: #000;
 }

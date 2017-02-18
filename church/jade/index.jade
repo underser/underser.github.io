@@ -5,7 +5,6 @@ block content
 		.wrapper
 			.main
 				include jade-includes/_body-header.jade
-				include jade-includes/_slider.jade
 				.content
 					section.grid-holder
 						section.grid
@@ -17,5 +16,5 @@ block content
 										em.h-right
 							include jade-includes/_aside.jade
 							article.column.c-three-fourth
-								p Тут контент
+								include jade-includes/_slider.jade
 			include jade-includes/_footer.jade

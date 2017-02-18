@@ -8,11 +8,21 @@
 
 @import "sass-includes/_base.sass"
 
+.wrapper
+	display: table
+	height: 100%
+	.main
+		display: table-row
+		height: 100%
+
 .content
 	max-width: $container-width
-	margin-top: 185px
+	margin-top: 0
 	.c-three-fourth
 		width: 900px
+
+#header
+	position: relative
 
 .header-wrapper
 	background-color: $base
@@ -30,16 +40,25 @@
 	align-items: center
 	z-index: 9999
 	&-left
-		width: 40%
-		padding: 0 20px
+		width: 35%
+		padding-right: 20px
 	&-right
-		width: 80%
+		width: 63%
 
 .banner
-	margin-top: 155px
+	//margin-top: 155px
 
-.blog-holder .contact-box
-	width: 100%
+.blog-holder
+	.contact-box
+		width: 100%
+	.left
+		width: 48%
+		padding: 0 2% 0 0
+		margin-right: 2%
+		//text-align: center
+	.right
+		width: 48%
+		//text-align: center
 
 .bx-wrapper .bx-pager
 	z-index: 9
@@ -51,26 +70,32 @@
 	text-align: left
 
 .site-name
+	font-size: 35px
+	text-align: right
 	line-height: 35px
+	margin-top: 0
+	//text-shadow: rgb(255, 252, 168) 2px 2px 0px, rgb(156, 156, 156) 4px 4px 0px
 	color: $primary
 
 .location
 	text-align: right
 	font-size: 20px
+	margin-top: 47px
+	margin-bottom: 10px
 
 .promo-text
 	font-size: 15px
 	font-family: RusDecor
-	text-align: right
 	line-height: 21px
+	color: $primary
 
 .logo-link
 	display: block
 	text-align: center
 	img
-		width: 80px
-		height: 80px
-		border: 1px solid darken($base, 10%)
+		width: 100px
+		height: 100px
+		border: 10px solid #b2b2b2
 
 .footer .holder
 	width: $container-width
@@ -78,6 +103,7 @@
 
 .footer .bottom
 	background: $base
+	padding: 10px 0
 	p
 		color: #fff
 
@@ -91,23 +117,77 @@
 .inner-heading
 	font-family: "RusDecor"
 
+.right-sidebar
+	border-color: #795548
+	background: $secondary
+
 .archives
-	li a
-		font-family: "RusDecor"
-		font-weight: bold
+	margin: 20px 0
+	padding: 0
+	li
+		padding-left: 0
+		padding-bottom: 0
+		border: 0
+		a
+			font-size: 18px
+			font-family: "RusDecor"
+			font-weight: bold
 	.sub-menu a
 		font-weight: normal
+	.right-heading
+		width: 85%
+		span
+			padding: 0 5px 0 10px
 
-.footer p
-	font-family: "RusDecor"
+.right-heading
+	float: none
+	width: 70%
+	display: inline-block
+	span
+		background: none
+		padding: 0 50px 3px 45px
+
+.num-post
+	background: url(../vendor/images/faqclose.png) no-repeat 0 0
+	width: 29px
+	height: 29px
+	float: right
+	margin-top: 7px
+	cursor: pointer
+
+.num-post.active
+	transform: rotate(90deg)
+	border-color: #000
+
+.sub-menu
+	visibility: hidden
+	height: 0
+	overflow: hidden
+	transition: all 0.5s
+
+.sub-menu.active
+	padding-top: 10px
+	visibility: visible
+	height: auto
+	overflow: auto
+	transition: all 0.5s
+
+
+.footer
+	p
+		font-family: "RusDecor"
 
 .footer-bottom-info
 	display: flex
 	align-items: center
+	.left
+		width: 30%
 	.center
+		width: 60%
 		margin: auto
 		text-align: center
 	.right
+		width: 30%
 		margin-left: auto
 
 
@@ -128,3 +208,15 @@
 		img
 			width: 20px
 			height: 20px
+
+.bl-read
+	display: inline-block
+	width: 35%
+	padding: 10px 0 8px 0
+	span
+		padding-left: 15px
+		padding-right: 15px
+		font-size: 14px
+		line-height: 20px
+	a
+		color: #000
