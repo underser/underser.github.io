@@ -29,7 +29,7 @@
 	opacity: 1
 
 .header-holder
-	display: flex
+	@include clearfix
 	max-width: $container-width
 	min-width: $container-width
 	padding: 10px 0
@@ -37,12 +37,13 @@
 	color: #fff
 	letter-spacing: 1px
 	justify-content: center
-	align-items: center
 	z-index: 9999
 	&-left
+		float: left
 		width: 35%
-		padding-right: 20px
+		padding-right: 2%
 	&-right
+		float: left
 		width: 63%
 
 .banner
@@ -70,16 +71,17 @@
 	text-align: left
 
 .site-name
-	font-size: 35px
+	font-size: 36px
 	text-align: right
 	line-height: 35px
 	margin-top: 0
-	//text-shadow: rgb(255, 252, 168) 2px 2px 0px, rgb(156, 156, 156) 4px 4px 0px
-	color: $primary
+	background: linear-gradient(lighten($primary, 12%), $primary)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
 
 .location
 	text-align: right
-	font-size: 20px
+	font-size: 22px
 	margin-top: 47px
 	margin-bottom: 10px
 
@@ -118,8 +120,8 @@
 	font-family: "RusDecor"
 
 .right-sidebar
-	border-color: #795548
-	background: $secondary
+	border: 1px solid #795548
+	background: rgb(255, 255, 189)
 
 .archives
 	margin: 20px 0
@@ -129,11 +131,18 @@
 		padding-bottom: 0
 		border: 0
 		a
-			font-size: 18px
+			text-transform: capitalize
+			font-size: 17px
 			font-family: "RusDecor"
 			font-weight: bold
-	.sub-menu a
-		font-weight: normal
+			&:hover
+				text-decoration: none
+	.sub-menu
+		padding-left: 28px
+		li
+			margin: 0
+		a
+			font-weight: normal
 	.right-heading
 		width: 85%
 		span
@@ -176,18 +185,31 @@
 .footer
 	p
 		font-family: "RusDecor"
+		font-size: 15px
+
+.calendar
+	table
+		td
+			padding: 0
+		a
+			color: #000
 
 .footer-bottom-info
+	display: inline-block
 	display: flex
 	align-items: center
+	width: 100%
 	.left
-		width: 30%
+		display: inline-block
+		width: 29%
 	.center
-		width: 60%
+		display: inline-block
+		width: 39%
 		margin: auto
 		text-align: center
 	.right
-		width: 30%
+		display: inline-block
+		width: 29%
 		margin-left: auto
 
 
@@ -220,3 +242,15 @@
 		line-height: 20px
 	a
 		color: #000
+
+p
+	&.justify
+		&full
+			text-align: justify
+		&left
+			text-align: left
+		&right
+			text-align: right
+
+.bx-pager.bx-default-pager
+	display: none

@@ -85,8 +85,6 @@ body p {
 }
 
 .header-holder {
-  display: -ms-flexbox;
-  display: flex;
   max-width: 1230px;
   min-width: 1230px;
   padding: 10px 0;
@@ -95,17 +93,23 @@ body p {
   letter-spacing: 1px;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
   z-index: 9999;
 }
 
+.header-holder:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .header-holder-left {
+  float: left;
   width: 35%;
-  padding-right: 20px;
+  padding-right: 2%;
 }
 
 .header-holder-right {
+  float: left;
   width: 63%;
 }
 
@@ -135,16 +139,18 @@ body p {
 }
 
 .site-name {
-  font-size: 35px;
+  font-size: 36px;
   text-align: right;
   line-height: 35px;
   margin-top: 0;
-  color: #ffa15d;
+  background: linear-gradient(#ffc59a, #ffa15d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .location {
   text-align: right;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 47px;
   margin-bottom: 10px;
 }
@@ -195,8 +201,8 @@ body p {
 }
 
 .right-sidebar {
-  border-color: #795548;
-  background: #FFF59D;
+  border: 1px solid #795548;
+  background: #ffffbd;
 }
 
 .archives {
@@ -211,9 +217,22 @@ body p {
 }
 
 .archives li a {
-  font-size: 18px;
+  text-transform: capitalize;
+  font-size: 17px;
   font-family: "RusDecor";
   font-weight: bold;
+}
+
+.archives li a:hover {
+  text-decoration: none;
+}
+
+.archives .sub-menu {
+  padding-left: 28px;
+}
+
+.archives .sub-menu li {
+  margin: 0;
 }
 
 .archives .sub-menu a {
@@ -270,27 +289,41 @@ body p {
 
 .footer p {
   font-family: "RusDecor";
+  font-size: 15px;
+}
+
+.calendar table td {
+  padding: 0;
+}
+
+.calendar table a {
+  color: #000;
 }
 
 .footer-bottom-info {
+  display: inline-block;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .footer-bottom-info .left {
-  width: 30%;
+  display: inline-block;
+  width: 29%;
 }
 
 .footer-bottom-info .center {
-  width: 60%;
+  display: inline-block;
+  width: 39%;
   margin: auto;
   text-align: center;
 }
 
 .footer-bottom-info .right {
-  width: 30%;
+  display: inline-block;
+  width: 29%;
   margin-left: auto;
 }
 
@@ -334,4 +367,20 @@ body p {
 
 .bl-read a {
   color: #000;
+}
+
+p.justifyfull {
+  text-align: justify;
+}
+
+p.justifyleft {
+  text-align: left;
+}
+
+p.justifyright {
+  text-align: right;
+}
+
+.bx-pager.bx-default-pager {
+  display: none;
 }
